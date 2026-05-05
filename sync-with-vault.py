@@ -56,12 +56,27 @@ def has_publish_tag(front_matter):
 
 
 # Helper function to copy files preserving folder structure
-def copy_file(src_path, dst_root, root_dir):
+def copy_file(src_path, dst_root, root_dir, inject_publish=False):
     rel_path = os.path.relpath(src_path, root_dir)
     out_path = os.path.join(dst_root, rel_path)
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
-    shutil.copy2(src_path, out_path)
-    logging.info(f"Copied '{src_path}' to '{out_path}'")
+    if inject_publish and src_path.lower().endswith(".md"):
+        with open(src_path, "r", encoding="utf-8") as f:
+            content = f.read()
+        # Add publish: true to existing frontmatter
+        content = re.sub(
+            r"^(---\n)(.*?)(^---)",
+            r"\1\2publish: true\n\3",
+            content,
+            count=1,
+            flags=re.DOTALL | re.MULTILINE,
+        )
+        with open(out_path, "w", encoding="utf-8") as f:
+            f.write(content)
+        logging.info(f"Copied (with publish property) '{src_path}' to '{out_path}'")
+    else:
+        shutil.copy2(src_path, out_path)
+        logging.info(f"Copied '{src_path}' to '{out_path}'")
     return out_path
 
 
@@ -95,8 +110,8 @@ def main(src, dst):
                 logging.info(f"'publish' tag not found in '{md_path}', skipping.")
                 continue
 
-            # copy markdown file
-            copy_file(md_path, dst, src)
+            # copy markdown file, injecting publish: true property
+            copy_file(md_path, dst, src, inject_publish=True)
 
             # copy linked images
             for img in extract_images(content):

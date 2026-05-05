@@ -1,6 +1,6 @@
 ---
-title: Welcome to Quartz
+title: Welcome to my vault.
+publish: true
 ---
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+I recommend starting here: [[About me]]

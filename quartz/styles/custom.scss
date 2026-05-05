@@ -1,3 +1,10 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+a.internal {
+  background-color: transparent !important;
+}
+body {
+  background-image: radial-gradient(circle 6px at 10px 10px, rgba(0, 0, 0, 0.05) 90%, transparent 91%);
+  background-size: 20px 20px;
+}
