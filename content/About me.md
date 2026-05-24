@@ -10,7 +10,7 @@ In my free time I like to climb and destroy my loved-ones at Catan.
 ## Projects
 Some of the projects I have done:
 
-- [[Bachelor Thesis]]
+- [[Bachelor Thesis| Bachelor Thesis: PhishGPT]]
 - [[XLRIT Internship]]
 - [[Kaggle Competitions]]
 - [News Outlet Scraper](https://github.com/riberoc/news-scraper-assignment)
@@ -19,6 +19,14 @@ Some of the projects I have done:
 
 I have played in some CTF competitions: 
 - [Nymacon](https://www.linkedin.com/posts/marcelo-ribero-cerro-7b56ba323_great-day-at-the-nymacon-hackathon-at-waalhalla-activity-7392881635505065984-c6XI?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHLuvkBwq3mcTIrKSi4B4X8LVI5jv5PcvQ)
-- Challenge The Cyber https://challengethecyber.nl/
+- [Challenge The Cyber](https://challengethecyber.nl/)
 - [SURTcert CTF](https://www.linkedin.com/posts/marcelo-ribero-cerro-7b56ba323_the-other-day-i-participated-in-the-surfcert-share-7405173938365964289-v2Dw?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHLuvkBwq3mcTIrKSi4B4X8LVI5jv5PcvQ)
 
+
+## Presentations
+
+During my studies I had to opportunity to practice my presentations skills over different topics. Some of my latest presentations were (oldest to newest):
+
+- Bachelor Thesis. [[Presentation-Radboud-University-20-slides.pdf|Slides]]
+- Paper review: Buy it Now, Track Me Later:​ Attacking User Privacy via Wi-Fi AP Online Auctions​. [[OTP-Assignment_3.pdf|Slides]]
+- Privacy Friendly Revocation of Credentials specially about Dynamic Accumulators. [[Presentation-Radboud-University-20-slides(1).pdf|Slides]]

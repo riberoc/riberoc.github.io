@@ -8,24 +8,41 @@ logging.basicConfig(
     level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s"
 )
 
-# Obsidian image embed patterns ![[image.png]]
-IMAGE_PATTERNS = [
-    re.compile(r"!\[\[(?=[^]]*\.)[^]]+?\]\]"),
+# Obsidian wikilink/embed patterns: ![[file.ext]] and [[file.ext]]
+WIKILINK_PATTERNS = [
+    re.compile(r"!?\[\[(?=[^]]*\.)[^]]+?\]\]"),
 ]
+
+# Standard markdown link pattern: [text](file.ext)
+MDLINK_PATTERN = re.compile(r"\[[^\]]*\]\(([^)]+\.[^)]+)\)")
 
 # Please change these to your use case.
 DEFAULT_VAULT_DIR = "~/diamond"
 DEFAULT_QUARTZ_DIR = "./content"
 
 
-# Helper function to extract images from markdown content
-def extract_images(markdown_text):
-    images = set()
-    for pattern in IMAGE_PATTERNS:
+def extract_assets(markdown_text):
+    assets = set()
+    for pattern in WIKILINK_PATTERNS:
         for match in pattern.findall(markdown_text):
-            images.add(match.split("|")[0])  # remove Obsidian alias if present
-    logging.info(f"Found images: {images}")
-    return images
+            # strip ![[...]] or [[...]] delimiters, then alias
+            inner = re.sub(r"^!?\[\[|\]\]$", "", match)
+            assets.add(inner.split("|")[0].strip())
+    for match in MDLINK_PATTERN.findall(markdown_text):
+        # skip external URLs and anchor-only links
+        if not match.startswith("http") and not match.startswith("#"):
+            assets.add(match.strip())
+    logging.info(f"Found assets: {assets}")
+    return assets
+
+
+def find_in_vault(filename, vault_root):
+    """Search entire vault for a file by basename."""
+    basename = os.path.basename(filename)
+    for root, _, files in os.walk(vault_root):
+        if basename in files:
+            return os.path.join(root, basename)
+    return None
 
 
 # Helper function to check if 'publish' is in tags
@@ -113,13 +130,18 @@ def main(src, dst):
             # copy markdown file, injecting publish: true property
             copy_file(md_path, dst, src, inject_publish=True)
 
-            # copy linked images
-            for img in extract_images(content):
-                img_path = os.path.join(root, img)
-                if os.path.isfile(img_path):
-                    copy_file(img_path, dst, src)
+            # copy linked assets (images, PDFs, etc.)
+            for asset in extract_assets(content):
+                # try same dir first, then vault-wide search
+                local_path = os.path.join(root, os.path.basename(asset))
+                if os.path.isfile(local_path):
+                    copy_file(local_path, dst, src)
                 else:
-                    logging.warning(f"Image not found: {img_path}")
+                    found = find_in_vault(asset, src)
+                    if found:
+                        copy_file(found, dst, src)
+                    else:
+                        logging.warning(f"Asset not found: {asset}")
 
 
 if __name__ == "__main__":

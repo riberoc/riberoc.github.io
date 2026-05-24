@@ -5,10 +5,12 @@ publish: true
 ---
 In my thesis, "PhishGPT: Automating HTML Phishing Emails Using ChatGPT" I investigated the potential of Large Language Models, particularly ChatGPT, to automate the creation of high-quality spearphishing emails. 
 
+My supervisor was [dr. H.K. Schraffenberger](https://www.linkedin.com/in/schraffenberger/) and my second reader [dr. M. Santos Wessel](https://www.linkedin.com/in/mairieli/). I am very grateful for Dr. Hanna Schraffenberger for were amazing guidance. I recommend her very much.
+
 The findings show that LLM-generated emails did not raise more suspicion than legitimate emails. This research highlights the feasibility of mass spearphishing campaigns.
 
 Nowadays, these capabilities has become obvious within the cybersecurity community.
 
-[Link to the paper](https://www.cs.ru.nl/bachelors-theses/2025/Marcelo_Ribero_Cerro___1100744___PhishGPT_-_Automating_HTML_Phishing_Emails_Using_ChatGPT.pdf).
+[Paper](https://www.cs.ru.nl/bachelors-theses/2025/Marcelo_Ribero_Cerro___1100744___PhishGPT_-_Automating_HTML_Phishing_Emails_Using_ChatGPT.pdf) and [[Presentation-Radboud-University-20-slides.pdf|slides]].
 
 As part of the thesis, I implemented a simplistic [gmail clone ](https://github.com/riberoc/simple-gmail-clone)for survey participants.

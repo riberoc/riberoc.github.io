@@ -3,4 +3,6 @@ title: Welcome to my vault.
 publish: true
 ---
 
-I recommend starting here: [[About me]]
+Thank you for taking the time for visit my website.
+
+If you want to find out more about I recommend you starting here [[About me]]

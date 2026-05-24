@@ -4,7 +4,23 @@
 a.internal {
   background-color: transparent !important;
 }
+
 body {
-  background-image: radial-gradient(circle 6px at 10px 10px, rgba(0, 0, 0, 0.05) 90%, transparent 91%);
   background-size: 20px 20px;
+}
+
+html[saved-theme="light"] body {
+  background-image: radial-gradient(circle 6px at 50% 50%, rgba(0, 0, 0, 0.04) 60%, transparent 100%);
+}
+
+html[saved-theme="dark"] body {
+  background-image: radial-gradient(circle 6px at 50% 50%, rgba(255, 255, 255, 0.01) 60%, transparent 100%);
+}
+
+.sidebar.left {
+  padding-left: 0.5rem !important;
+}
+
+.sidebar.right {
+  padding-right: 0.5rem !important;
 }
