@@ -2,6 +2,8 @@
 tags:
   - publish
 cover: [[Aboutme_2.png]]
+aliases:
+  - index
 publish: true
 ---
 Cybersecurity and AI master student at Radboud University.
