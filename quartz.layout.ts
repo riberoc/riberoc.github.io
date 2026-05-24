@@ -21,8 +21,8 @@ export const defaultContentPageLayout: PageLayout = {
       component: Component.Breadcrumbs(),
       condition: (page) => page.fileData.slug !== "index",
     }),
-    Component.ArticleTitle(),
-    Component.ContentMeta(),
+    // Swapped out individual title/meta tags for our new conditional combo component
+    Component.HeroHeader(),
     Component.TagList(),
   ],
   left: [
@@ -46,7 +46,6 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Backlinks(),
   ],
 }
-
 // components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],

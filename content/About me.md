@@ -1,6 +1,7 @@
 ---
 tags:
   - publish
+cover: [[Aboutme_2.png]]
 publish: true
 ---
 Cybersecurity and AI master student at Radboud University.
@@ -22,7 +23,7 @@ I have played in some CTF competitions:
 - [SURTcert CTF](https://www.linkedin.com/posts/marcelo-ribero-cerro-7b56ba323_the-other-day-i-participated-in-the-surfcert-share-7405173938365964289-v2Dw?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHLuvkBwq3mcTIrKSi4B4X8LVI5jv5PcvQ)
 
 ## Presentations
-During my studies I had the opportunity to practice my presentations skills over different topics. Some of my latest presentations were (oldest to newest):
+During my studies I had the opportunity to practice my presentation skills in different topics. Some of my latest presentations were (oldest to newest):
 
 - Bachelor Thesis. [[Presentation-Radboud-University-20-slides.pdf|Slides]]
 - Paper review: Buy it Now, Track Me Later:​ Attacking User Privacy via Wi-Fi AP Online Auctions​. [[OTP-Assignment_3.pdf|Slides]]

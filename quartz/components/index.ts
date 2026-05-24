@@ -23,6 +23,8 @@ import Breadcrumbs from "./Breadcrumbs"
 import Comments from "./Comments"
 import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
+// 1. Import our custom component
+import HeroHeader from "./HeroHeader"
 
 export {
   ArticleTitle,
@@ -50,4 +52,6 @@ export {
   Comments,
   Flex,
   ConditionalRender,
+  // 2. Export it
+  HeroHeader,
 }
