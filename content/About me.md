@@ -4,7 +4,6 @@ cover: [[Aboutme_2.png]]
 aliases: [index]
 publish: true
 ---
-## Marcelo Ribero Cerro
 
 Cybersecurity and AI master student at Radboud University.
 
