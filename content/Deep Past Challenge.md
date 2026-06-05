@@ -1,6 +1,6 @@
 ---
 created: 2026-06-05T15:09
-updated: 2026-06-05T15:10
+updated: 2026-06-05T15:13
 tags:
   - publish
   - ai
@@ -10,7 +10,7 @@ One of my most rewarding projects was the Kaggle Competition's Deep Past challen
 
 The main problem was data scarcity. We had very little parallel data, text with both Akkadian and English. This meant that we had to be very surgical with our decisions. We perform a literature review to find out what architectures could work well in this scenario as well as other techniques we could use. At the end, we opted for finetuning two pre-trained models known to perform well in low-resource settings, mBART and T5. Each with different architectures, allowing us the flexibility to compare approaches. 
 
-Apart from the data scarcity, the quality of the data was another issue. The Akkadian text was transliterated from ancient clay tablets, which were not always in the best condition, meaning that some text was unrecoverable. On top of that, the tablets were not always transliterated in the same way, which introduced inconsistencies. It was essential to normalize the text to improve its quality. For example, unrecoverable text must always be labeled in the same way. We ended up building an extensive preprocessing pipeline to normalize these inconsistencies and removed sentences below a certain threshold of quality to avoid adding noise to the model. The language itself also presented unique linguistic challenges, which required us to learn an extra language to do make the correct decisions (quite fun).
+Apart from the data scarcity, the quality of the data was another issue. The Akkadian text was transliterated from ancient clay tablets, which were not always in the best condition, meaning that some text was unrecoverable. On top of that, the tablets were not always transliterated in the same way, which introduced inconsistencies. It was essential to normalize the text to improve its quality. For example, unrecoverable text must always be labeled in the same way. We ended up building an extensive preprocessing pipeline to normalize these inconsistencies and removed sentences below a certain threshold of quality to avoid adding noise to the model. The language itself also presented unique linguistic challenges, which required us to learn an extra language to make the correct decisions (quite fun).
 
 To compensate for the limited data, we developed augmentation strategies. One approach: swap proper nouns (names of people and places) across sentence pairs. Another: substitute nouns with semantically similar alternatives, for example, replacing "silver" with "gold".
 
