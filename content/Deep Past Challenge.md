@@ -1,11 +1,12 @@
 ---
 created: 2026-06-05T15:09
-updated: 2026-06-05T15:13
+updated: 2026-06-06T14:19
 tags:
   - publish
   - ai
 publish: true
 ---
+
 One of my most rewarding projects was the Kaggle Competition's Deep Past challenge. Our task was to build a model to translate Old Akkadian text into English. What made it so satisfying was the sheer difficulty and the creativity required at every step.
 
 The main problem was data scarcity. We had very little parallel data, text with both Akkadian and English. This meant that we had to be very surgical with our decisions. We perform a literature review to find out what architectures could work well in this scenario as well as other techniques we could use. At the end, we opted for finetuning two pre-trained models known to perform well in low-resource settings, mBART and T5. Each with different architectures, allowing us the flexibility to compare approaches. 
