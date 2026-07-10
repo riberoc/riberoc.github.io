@@ -1,9 +1,9 @@
 ---
 created: 2026-06-05T15:09
-updated: 2026-06-06T14:19
+updated: 2026-06-15T13:07
 tags:
   - publish
-  - ai
+  - math/ai
 publish: true
 ---
 
