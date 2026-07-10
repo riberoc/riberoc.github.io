@@ -5,7 +5,7 @@ cover: [[Aboutme_2.png]]
 aliases:
   - index
 created: 2026-05-05T16:21
-updated: 2026-07-10T09:29
+updated: 2026-07-10T09:35
 publish: true
 ---
 Cybersecurity and AI master student at Radboud University.
@@ -30,8 +30,8 @@ Some of the projects I have done:
 - [[Bachelor Thesis|Bachelor Thesis: PhishGPT]]
 - [[XLRIT Internship]]
 - [[Kaggle Competitions]]
-- [News Outlet Scraper](https://github.com/riberoc/news-scraper-assignment)
-- [Javacard Application: Vehicle Rental System](https://github.com/riberoc/javacard-vehicle-rental-system/tree/master)
+- [[News Outlet Scraper]]
+- [[Javacard Application - Vehicle Rental System]]
 - Dynamic Spotlighting Research Paper. Link soon. 
 - Open Source Fuzzing. Link soon
 ## CTFing
