@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: quartz.jzhao.xyz
+  baseUrl: riberoc.github.io
   ignorePatterns:
     - private
     - templates
@@ -21,26 +21,31 @@ configuration:
       code: IBM Plex Mono
     colors:
       lightMode:
-        light: "#faf8f8"
-        lightgray: "#e5e5e5"
-        gray: "#b8b8b8"
-        darkgray: "#4e4e4e"
-        dark: "#2b2b2b"
-        secondary: "#284b63"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#fff23688"
+        light: "#fcf8d1"
+        lightgray: "#ede8de"
+        gray: "#0a1710"
+        darkgray: "#0a1710"
+        dark: "#0a1714"
+        secondary: "#E35B00"
+        tertiary: "#E35B00"
+        highlight: rgba(168, 95, 29, 0.12)
+        textHighlight: "#ffe8cc"
       darkMode:
-        light: "#161618"
-        lightgray: "#393639"
-        gray: "#646464"
-        darkgray: "#d4d4d4"
-        dark: "#ebebec"
-        secondary: "#7b97aa"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#b3aa0288"
+        light: "#0e1e2e"
+        lightgray: "#302d41"
+        gray: "#6d6b7d"
+        darkgray: "#ffffff"
+        dark: "#ffffff"
+        secondary: "#e58955"
+        tertiary: "#e58955"
+        highlight: rgba(217, 165, 116, 0.15)
+        textHighlight: "#ffdbbb"
 plugins:
+  - source: ./hero-banner
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 10
   - source: github:quartz-community/created-modified-date
     enabled: true
     options:
@@ -59,9 +64,19 @@ plugins:
       keepBackground: false
     order: 20
   - source: github:quartz-community/obsidian-flavored-markdown
-    enabled: false
+    enabled: true
     options:
+      comments: true
+      highlight: true
+      wikilinks: true
+      callouts: true
+      mermaid: true
+      parseTags: true
+      parseArrows: true
+      parseBlockReferences: true
       enableInHtmlEmbed: false
+      enableYouTubeEmbed: true
+      enableVideoEmbed: true
       enableCheckbox: true
     order: 30
   - source: github:quartz-community/github-flavored-markdown
@@ -90,7 +105,7 @@ plugins:
     enabled: false
     order: 85
   - source: github:quartz-community/hard-line-breaks
-    enabled: false
+    enabled: true
     order: 90
   - source: github:quartz-community/ox-hugo
     enabled: false
@@ -104,6 +119,23 @@ plugins:
     enabled: true
   - source: github:quartz-community/explicit-publish
     enabled: false
+  - source: github:quartz-community/unlisted-pages
+    enabled: true
+    options: {}
+    order: 45
+  - source: github:quartz-community/encrypted-pages
+    enabled: true
+    options:
+      iterations: 600000
+      passwordField: password
+      unlistWhenEncrypted: false
+      outputPath: static/encryptedContentIndex.json
+  - source: github:quartz-community/stacked-pages
+    enabled: false
+    layout:
+      position: afterBody
+      priority: 50
+      display: all
   - source: github:quartz-community/alias-redirects
     enabled: true
   - source: github:quartz-community/content-index
@@ -132,6 +164,35 @@ plugins:
       priority: 50
   - source: github:quartz-community/graph
     enabled: true
+    options:
+      localGraph:
+        drag: true
+        zoom: true
+        depth: 1
+        scale: 1.5
+        repelForce: 0.5
+        centerForce: 0.3
+        linkDistance: 40
+        fontSize: 0.5
+        opacityScale: 0
+        removeTags: []
+        showTags: false
+        focusOnHover: false
+        enableRadial: false
+      globalGraph:
+        drag: true
+        zoom: true
+        depth: -1
+        scale: 0.9
+        repelForce: 0.5
+        centerForce: 0.2
+        linkDistance: 30
+        fontSize: 0.6
+        opacityScale: 1
+        removeTags: []
+        showTags: false
+        focusOnHover: true
+        enableRadial: true
     layout:
       position: right
       priority: 10
@@ -149,12 +210,12 @@ plugins:
       position: right
       priority: 50
   - source: github:quartz-community/article-title
-    enabled: true
+    enabled: false
     layout:
       position: beforeBody
       priority: 10
   - source: github:quartz-community/content-meta
-    enabled: true
+    enabled: false
     layout:
       position: beforeBody
       priority: 20
@@ -223,7 +284,7 @@ plugins:
         - tags
         - aliases
       excludedProperties: []
-      hidePropertiesView: false
+      hidePropertiesView: true
       delimiters: ---
       language: yaml
     order: 5
@@ -231,28 +292,20 @@ plugins:
       position: beforeBody
       priority: 15
       display: all
-  - source: github:quartz-community/unlisted-pages
-    enabled: true
-    options: {}
-    order: 45
-  - source: github:quartz-community/encrypted-pages
+  - source:
+      name: quartz-themes
+      repo: github:saberzero1/quartz-themes
+      subdir: plugin
+    enabled: false
+    options:
+      theme: default
+  - source: github:quartz-community/obsidian-plugin-excalidraw
     enabled: true
     options:
-      iterations: 600000
-      passwordField: password
-      unlistWhenEncrypted: false
-      outputPath: static/encryptedContentIndex.json
-    order: 900
-    layout:
-      position: body
-      priority: 100
-      display: all
-  - source: github:quartz-community/stacked-pages
-    enabled: false
-    layout:
-      position: afterBody
-      priority: 50
-      display: all
+      enableInteraction: true
+      darkMode: auto
+      exportPadding: 20
+    order: 50
 layout:
   groups:
     toolbar:
