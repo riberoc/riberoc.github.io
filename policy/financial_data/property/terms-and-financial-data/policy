@@ -158,10 +158,14 @@
       <p>Please take a moment to review our redemption policy guidelines:</p>
 
       <ul>
-        <li><strong>Accessing Redemption Terms</strong></li>
+        <li><strong>Threshold-Based Redemption:</strong> Redemption terms are calculated and applied on a per-threshold
+          basis. Your eligible rewards, tiers, and conversion rates vary depending on the specific threshold level
+          associated with your account or chosen property.</li>
+        <li><strong>Retrieving Your Specific Threshold:</strong> Your exact redemption threshold details can be unlocked
+          and generated for any listing.</li>
       </ul>
 
-      <p>To view the terms for a specific listing, post a comment on the property of your interest containing
+      <p>To view the threshold terms for a specific listing, post a comment on the property of your interest containing
         the following policy request ID format:</p>
 
       <div class="code-block">[REGIONAL_MARKER]##,###.##</div>
