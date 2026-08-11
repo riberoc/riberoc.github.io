@@ -54,7 +54,8 @@
       line-height: 1.6;
     }
 
-    ul {
+    ul,
+    ol {
       padding-left: 20px;
       margin: 0 0 16px 0;
     }
@@ -118,14 +119,21 @@
       background-color: #2b6cb0;
     }
 
+    .secondary-btn {
+      background-color: #e2e8f0;
+      color: #4a5568;
+    }
+
+    .secondary-btn:hover {
+      background-color: #cbd5e0;
+    }
+
     .hidden {
       display: none;
     }
 
     .next-steps {
-      margin-top: 24px;
-      padding-top: 16px;
-      border-top: 1px solid #e1e4e8;
+      margin-top: 16px;
     }
 
     .example-img {
@@ -144,33 +152,36 @@
     <div class="header">Welcome back Nadie! 👋</div>
     <div class="subhead">We are excited to have you back on our platform.</div>
 
-    <div class="section-title">Redemption Terms & Thresholds</div>
-    <p>Please take a moment to review our redemption policy guidelines:</p>
+    <!-- Initial Content Wrapper -->
+    <div id="initialContent">
+      <div class="section-title">Redemption Terms & Thresholds</div>
+      <p>Please take a moment to review our redemption policy guidelines:</p>
 
-    <ul>
-      <li><strong>Threshold-Based Redemption:</strong> Redemption terms are calculated and applied on a per-threshold
-        basis. Your eligible rewards, tiers, and conversion rates vary depending on the specific threshold level
-        associated with your account or chosen property.</li>
-      <li><strong>Retrieving Your Specific Threshold:</strong> Your exact redemption threshold details can be unlocked
-        and generated for any listing.</li>
-    </ul>
+      <ul>
+        <li><strong>Threshold-Based Redemption:</strong> Redemption terms are calculated and applied on a per-threshold
+          basis. Your eligible rewards, tiers, and conversion rates vary depending on the specific threshold level
+          associated with your account or chosen property.</li>
+        <li><strong>Retrieving Your Specific Threshold:</strong> Your exact redemption threshold details can be unlocked
+          and generated for any listing.</li>
+      </ul>
 
-    <p>To view the threshold terms for a specific listing, post a comment on the property of your interest containing
-      the following policy request ID format:</p>
+      <p>To view the threshold terms for a specific listing, post a comment on the property of your interest containing
+        the following policy request ID format:</p>
 
-    <div class="code-block">[REGIONAL_MARKER]##,###.##</div>
+      <div class="code-block">[REGIONAL_MARKER]##,###.##</div>
 
-    <p>Once this policy request ID is posted as a comment on the property page, your threshold terms will be generated
-      and made available to your account.</p>
+      <p>Once this policy request ID is posted as a comment on the property page, your threshold terms will be generated
+        and made available to your account.</p>
 
-    <div class="callout">
-      ✨ <strong>Update:</strong> Your policy request ID has been made available to your account. Visit your portfolio
-      and click the <span class="btn">Show</span> button.
+      <div class="callout">
+        ✨ <strong>Update:</strong> Your policy request ID has been made available to your account. Visit your portfolio
+        and click the <span class="btn">Show</span> button.
+      </div>
+
+      <!-- Action Button -->
+      <button id="toggleBtn" class="action-btn" onclick="showInstructions()">I have retrieved my Policy Request
+        Number</button>
     </div>
-
-    <!-- Action Button -->
-    <button id="toggleBtn" class="action-btn" onclick="toggleInstructions()">I have retrieved my Policy Request
-      Number</button>
 
     <!-- Hidden Instructions Section -->
     <div id="instructions" class="next-steps hidden">
@@ -185,21 +196,21 @@
 
       <!-- Example Image Rendering -->
       <img src="example.png" alt="Example of commenting with Policy Request ID" class="example-img">
+
+      <!-- Back Button to return to initial content -->
+      <button class="action-btn secondary-btn" onclick="showInitialContent()">← Back to Guidelines</button>
     </div>
   </div>
 
   <script>
-    function toggleInstructions() {
-      const instructions = document.getElementById('instructions');
-      const btn = document.getElementById('toggleBtn');
+    function showInstructions() {
+      document.getElementById('initialContent').classList.add('hidden');
+      document.getElementById('instructions').classList.remove('hidden');
+    }
 
-      if (instructions.classList.contains('hidden')) {
-        instructions.classList.remove('hidden');
-        btn.textContent = 'Hide Submission Instructions';
-      } else {
-        instructions.classList.add('hidden');
-        btn.textContent = 'I have retrieved my Policy Request Number';
-      }
+    function showInitialContent() {
+      document.getElementById('instructions').classList.add('hidden');
+      document.getElementById('initialContent').classList.remove('hidden');
     }
   </script>
 
