@@ -32,7 +32,7 @@ jobs:
       # --- ADDED STEP START ---
       - name: Policy
         run: |
-          mkdir -p public/my-subfolder
+          mkdir -p public/policy
           cp policy/index.html public/policy/
           # Optional: Copy associated assets if you add any later
           # cp -r path/to/your/assets public/my-subfolder/
