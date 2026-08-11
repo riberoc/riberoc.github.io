@@ -28,6 +28,15 @@ jobs:
         run: npm ci
       - name: Build Quartz
         run: npx quartz build
+
+      # --- ADDED STEP START ---
+      - name: Policy
+        run: |
+          mkdir -p public/my-subfolder
+          cp policy/index.html public/policy/
+          # Optional: Copy associated assets if you add any later
+          # cp -r path/to/your/assets public/my-subfolder/
+      # --- ADDED STEP END ---
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
