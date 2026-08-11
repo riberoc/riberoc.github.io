@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Policy Request Instructions</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f4f6f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 20px 0;
+    }
+
+    .card {
+      background: #ffffff;
+      max-width: 580px;
+      padding: 32px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid #e1e4e8;
+    }
+
+    .header {
+      color: #1a202c;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .subhead {
+      color: #4a5568;
+      font-size: 16px;
+      margin-bottom: 24px;
+    }
+
+    .section-title {
+      color: #2b6cb0;
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 24px;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #ebf8ff;
+      padding-bottom: 6px;
+    }
+
+    p,
+    li {
+      color: #4a5568;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    ul,
+    ol {
+      padding-left: 20px;
+      margin: 0 0 16px 0;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .code-block {
+      background-color: #edf2f7;
+      border-left: 4px solid #3182ce;
+      font-family: "Courier New", Courier, monospace;
+      font-weight: bold;
+      color: #2d3748;
+      padding: 10px 14px;
+      margin: 12px 0;
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    .callout {
+      background-color: #f0fff4;
+      border: 1px solid #c6f6d5;
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-top: 20px;
+      color: #22543d;
+      font-size: 14px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #3182ce;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 12px;
+      margin-left: 4px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .action-btn {
+      display: block;
+      width: 100%;
+      background-color: #3182ce;
+      color: white;
+      border: none;
+      padding: 12px 16px;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.2s ease;
+      text-align: center;
+    }
+
+    .action-btn:hover {
+      background-color: #2b6cb0;
+    }
+
+    .secondary-btn {
+      background-color: #e2e8f0;
+      color: #4a5568;
+    }
+
+    .secondary-btn:hover {
+      background-color: #cbd5e0;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .next-steps {
+      margin-top: 16px;
+    }
+
+    .example-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid #cbd5e0;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <div class="header">Welcome back Nadie! 👋</div>
+    <div class="subhead">We are excited to have you back on our platform.</div>
+
+    <!-- Initial Content Wrapper -->
+    <div id="initialContent">
+      <div class="section-title">Redemption Terms & Thresholds</div>
+      <p>Please take a moment to review our redemption policy guidelines:</p>
+
+      <ul>
+        <li><strong>Accessing Redemption Terms</strong></li>
+      </ul>
+
+      <p>To view the terms for a specific listing, post a comment on the property of your interest containing
+        the following policy request ID format:</p>
+
+      <div class="code-block">[REGIONAL_MARKER]##,###.##</div>
+
+      <p>Once this policy request ID is posted as a comment on the property page, your threshold terms will be generated
+        and made available to your account.</p>
+
+      <div class="callout">
+        ✨ <strong>Update:</strong> Your policy request ID has been made available to your account. Visit your portfolio
+        and click the <span class="btn">Show</span> button.
+      </div>
+
+      <!-- Action Button -->
+      <button id="toggleBtn" class="action-btn" onclick="showInstructions()">I have retrieved my Policy Request
+        Number</button>
+    </div>
+
+    <!-- Hidden Instructions Section -->
+    <div id="instructions" class="next-steps hidden">
+      <div class="section-title">Submitting Your Policy Request</div>
+      <p>Now that you have retrieved your Policy Request ID, follow these steps to proceed:</p>
+      <ol>
+        <li>Navigate to your chosen property listing.</li>
+        <li>Scroll down to the comments section of the posting.</li>
+        <li>Write a new comment containing your exact <strong>Policy Request ID</strong>.</li>
+      </ol>
+      <p>Refer to the example image below on how your comment should look:</p>
+
+      <!-- Example Image Rendering -->
+      <img src="example.png" alt="Example of commenting with Policy Request ID" class="example-img">
+
+      <!-- Back Button to return to initial content -->
+      <button class="action-btn secondary-btn" onclick="showInitialContent()">← Back to Guidelines</button>
+    </div>
+  </div>
+
+  <script>
+    function showInstructions() {
+      document.getElementById('initialContent').classList.add('hidden');
+      document.getElementById('instructions').classList.remove('hidden');
+    }
+
+    function showInitialContent() {
+      document.getElementById('instructions').classList.add('hidden');
+      document.getElementById('initialContent').classList.remove('hidden');
+    }
+  </script>
+
+</body>
+
+</html>
