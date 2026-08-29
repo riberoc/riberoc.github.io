@@ -41,7 +41,7 @@ configuration:
         highlight: rgba(217, 165, 116, 0.15)
         textHighlight: "#ffdbbb"
 plugins:
-  - source: ./hero-banner
+  - source: ../../quartz-plugins/quartz-hero-banner
     enabled: true
     layout:
       position: beforeBody
