@@ -200,10 +200,10 @@
       "installedAt": "2026-06-03T13:32:36.002Z"
     },
     "quartz-hero-banner": {
-      "source": "../../quartz-plugins/quartz-hero-banner",
-      "resolved": "/home/sapo/projects/quartz-plugins/quartz-hero-banner",
-      "commit": "local",
-      "installedAt": "2026-08-29T14:08:08.385Z"
+      "source": "github:riberoc/quartz-hero-banner",
+      "resolved": "https://github.com/riberoc/quartz-hero-banner.git",
+      "commit": "bdd06b5849b8f7c6963aaa1c8452ef075e995d29",
+      "installedAt": "2026-08-29T14:19:52.007Z"
     },
     "quartz-themes": {
       "source": {
