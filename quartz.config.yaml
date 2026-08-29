@@ -1,13 +1,13 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Quartz 5
-  pageTitleSuffix: ""
+  pageTitle: riberoc's vault
+  pageTitleSuffix: "- riberoc's vault"
   enableSPA: true
   enablePopovers: true
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: riberoc.github.io
+  baseUrl: riberoc.github.io/vault
   ignorePatterns:
     - private
     - templates
@@ -118,7 +118,7 @@ plugins:
   - source: github:quartz-community/remove-draft
     enabled: true
   - source: github:quartz-community/explicit-publish
-    enabled: false
+    enabled: true
   - source: github:quartz-community/unlisted-pages
     enabled: true
     options: {}
@@ -259,8 +259,8 @@ plugins:
     enabled: true
     options:
       links:
-        GitHub: https://github.com/jackyzha0/quartz
-        Discord Community: https://discord.gg/cRFFHYye7t
+        GitHub: https://github.com/riberoc
+        LinkedIn: https://www.linkedin.com/in/marcelo-ribero-cerro-7b56ba323/
   - source: github:quartz-community/recent-notes
     enabled: false
   - source: github:quartz-community/spacer
@@ -322,11 +322,13 @@ layout:
     folder:
       exclude:
         - reader-mode
+        - hero-banner
       positions:
         right: []
     tag:
       exclude:
         - reader-mode
+        - hero-banner
       positions:
         right: []
     canvas: {}

@@ -1,1 +1,1 @@
-export { default as HeroBanner } from "./HeroBanner.js"
+export { default as HeroBanner } from "./Herobanner.js"

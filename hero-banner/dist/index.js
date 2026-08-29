@@ -1,1 +1,1 @@
-export { HeroBanner } from "./components/index.js"
+export { default as HeroBanner } from "./components/index.js"
