@@ -57,6 +57,11 @@ jobs:
       - name: Build Quartz site
         run: npx quartz build -d content -v
 
+      - name: Mount Quartz site under /vault
+        run: |
+          mkdir -p public/vault
+          find public -mindepth 1 -maxdepth 1 ! -name vault ! -name CNAME -exec mv {} public/vault/ \;
+
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
