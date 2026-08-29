@@ -157,12 +157,6 @@
       "commit": "0d448f38a24c568c5539ff2cd57d813293430ccd",
       "installedAt": "2026-06-03T13:16:36.965Z"
     },
-    "hero-banner": {
-      "source": "./hero-banner",
-      "resolved": "/home/sapo/projects/websites/quartz/hero-banner",
-      "commit": "local",
-      "installedAt": "2026-07-17T11:06:35.966Z"
-    },
     "latex": {
       "source": "github:quartz-community/latex",
       "resolved": "https://github.com/quartz-community/latex.git",
@@ -204,6 +198,12 @@
       "resolved": "https://github.com/quartz-community/page-title.git",
       "commit": "a1c1fe0a9c6a5ce1acf6efa01d473a7d9850e2a3",
       "installedAt": "2026-06-03T13:32:36.002Z"
+    },
+    "quartz-hero-banner": {
+      "source": "../../quartz-plugins/quartz-hero-banner",
+      "resolved": "/home/sapo/projects/quartz-plugins/quartz-hero-banner",
+      "commit": "local",
+      "installedAt": "2026-08-29T14:08:08.385Z"
     },
     "quartz-themes": {
       "source": {
