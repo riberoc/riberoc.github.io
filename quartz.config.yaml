@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: riberoc.github.io/vault
+  baseUrl: riberoc.github.io
   ignorePatterns:
     - private
     - templates
