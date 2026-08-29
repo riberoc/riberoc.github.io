@@ -58,13 +58,8 @@ plugins:
         dark: github-dark
       keepBackground: false
     order: 20
-<<<<<<< HEAD
-  - source: github:quartz-community/obsidian-flavored-markdown
-    enabled: false
-=======
   - source: "@quartz-community/obsidian-flavored-markdown"
     enabled: true
->>>>>>> 075afd3f712da0088a07f5284a7b3aba37dd61b6
     options:
       enableInHtmlEmbed: false
       enableCheckbox: true
