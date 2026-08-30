@@ -43,3 +43,7 @@ img[alt*="center"] {
   display: block;
   margin-inline: auto !important;
 }
+
+html {
+  font-size: 125%; // roughly equivalent to browser zoom at 110%
+}
