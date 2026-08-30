@@ -57,10 +57,13 @@ jobs:
       - name: Build Quartz site
         run: npx quartz build -d content -v
 
+      - name: Add root URL redirect
+        run: cp index.html public/index.html
+
       - name: Mount Quartz site under /vault
         run: |
           mkdir -p public/vault
-          find public -mindepth 1 -maxdepth 1 ! -name vault ! -name CNAME -exec mv {} public/vault/ \;
+          find public -mindepth 1 -maxdepth 1 ! -name vault ! -name CNAME ! -name index.html -exec mv {} public/vault/ \;
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
