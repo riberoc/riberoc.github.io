@@ -20,26 +20,28 @@ configuration:
       body: Source Sans Pro
       code: IBM Plex Mono
     colors:
+      # Kanagawa Lotus (light)
       lightMode:
-        light: "#fcf8d1"
-        lightgray: "#ede8de"
-        gray: "#0a1710"
-        darkgray: "#0a1710"
-        dark: "#0a1714"
-        secondary: "#E35B00"
-        tertiary: "#E35B00"
-        highlight: rgba(168, 95, 29, 0.12)
-        textHighlight: "#ffe8cc"
+        light: "#f2ecbc"
+        lightgray: "#e7dba0"
+        gray: "#716e61"
+        darkgray: "#545464"
+        dark: "#43436c"
+        secondary: "#4d699b"
+        tertiary: "#624c83"
+        highlight: "#e4d794"
+        textHighlight: "#b5cbd2"
+      # Kanagawa Wave (dark)
       darkMode:
-        light: "#0e1e2e"
-        lightgray: "#302d41"
-        gray: "#6d6b7d"
-        darkgray: "#ffffff"
-        dark: "#ffffff"
-        secondary: "#e58955"
-        tertiary: "#e58955"
-        highlight: rgba(217, 165, 116, 0.15)
-        textHighlight: "#ffdbbb"
+        light: "#1f1f28"
+        lightgray: "#2a2a37"
+        gray: "#727169"
+        darkgray: "#dcd7ba"
+        dark: "#c8c093"
+        secondary: "#7e9cd8"
+        tertiary: "#957fb8"
+        highlight: "#363646"
+        textHighlight: "#2d4f67"
 plugins:
   - source: github:riberoc/quartz-hero-banner
     enabled: true
@@ -59,8 +61,8 @@ plugins:
     enabled: true
     options:
       theme:
-        light: github-light
-        dark: github-dark
+        light: kanagawa-lotus
+        dark: kanagawa-wave
       keepBackground: false
     order: 20
   - source: github:quartz-community/obsidian-flavored-markdown
@@ -168,26 +170,26 @@ plugins:
       localGraph:
         drag: true
         zoom: true
-        depth: 1
+        depth: 2
         scale: 1.5
         repelForce: 0.5
         centerForce: 0.3
         linkDistance: 40
-        fontSize: 0.5
-        opacityScale: 0
+        fontSize: 1
+        opacityScale: 1
         removeTags: []
         showTags: false
-        focusOnHover: false
+        focusOnHover: true
         enableRadial: false
       globalGraph:
         drag: true
         zoom: true
         depth: -1
-        scale: 0.9
+        scale: 2
         repelForce: 0.5
         centerForce: 0.2
         linkDistance: 30
-        fontSize: 0.6
+        fontSize: 0.4
         opacityScale: 1
         removeTags: []
         showTags: false

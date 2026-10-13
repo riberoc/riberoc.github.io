@@ -47,3 +47,18 @@ img[alt*="center"] {
 html {
   font-size: 125%; // roughly equivalent to browser zoom at 110%
 }
+
+// Kanagawa theme refinements. The base palette lives in quartz.config.yaml
+// under configuration.theme.colors; these rules tune details it cannot express.
+::selection {
+  background: var(--textHighlight);
+  color: var(--darkgray);
+}
+
+html[saved-theme="light"] code {
+  background-color: #dcd7ba; // lotusWhite0
+}
+
+html[saved-theme="dark"] code {
+  background-color: #1a1a22; // sumiInk2
+}
