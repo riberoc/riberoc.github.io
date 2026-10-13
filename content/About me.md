@@ -6,7 +6,7 @@ cover: [[Aboutme_2.png]]
 aliases:
   - index
 created: 2026-05-05T16:21
-updated: 2026-10-13T16:17
+updated: 2026-10-13T17:12
 publish: true
 ---
 Welcome to My Website! Feel Free to Explore Around
@@ -18,3 +18,4 @@ In my free time I like to climb and win Catan games.
 Some good places to start:
 - [[My Projects]]
 - [[My Presentations]]
+	
