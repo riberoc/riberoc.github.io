@@ -1,5 +1,5 @@
 {
-  description = "Node.js development environment with npm and npx";
+  description = "Quartz digital garden development environment";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -17,15 +17,22 @@
         in
         {
           default = pkgs.mkShell {
+            # Provide Node.js (which includes npm/npx) and git (required by Quartz)
             packages = with pkgs; [
               nodejs
+              git
             ];
 
             shellHook = ''
-              echo "🚀 Node.js dev shell loaded!"
+              echo "🪴 Quartz dev environment loaded!"
               echo "Node version: $(node --version)"
               echo "npm version:  $(npm --version)"
-              echo "npx version:  $(npx --version)"
+
+              # Automatically install node_modules if they don't exist yet
+              if [ ! -d "node_modules" ]; then
+                echo "📦 Installing npm dependencies for Quartz..."
+                npm install
+              fi
             '';
           };
         });
