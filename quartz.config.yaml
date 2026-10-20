@@ -264,7 +264,7 @@ plugins:
         GitHub: https://github.com/riberoc
         LinkedIn: https://www.linkedin.com/in/marcelo-ribero-cerro-7b56ba323/
   - source: github:quartz-community/recent-notes
-    enabled: true  
+    enabled: false 
   - source: github:quartz-community/spacer
     enabled: true
     options: {}
