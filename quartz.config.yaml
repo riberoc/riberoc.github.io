@@ -49,7 +49,7 @@ plugins:
       position: beforeBody
       priority: 10
   - source: github:quartz-community/created-modified-date
-    enabled: true
+    enabled: false 
     options:
       defaultDateType: modified
       priority:

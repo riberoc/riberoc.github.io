@@ -33,8 +33,6 @@
                 echo "📦 Installing npm dependencies for Quartz..."
                 npm install
               fi
-              echo "🔌 Synchronizing Quartz plugins..."
-              npx quartz plugin install --from-config
             '';
           };
         });
