@@ -19,7 +19,7 @@
           default = pkgs.mkShell {
             # Provide Node.js (which includes npm/npx) and git (required by Quartz)
             packages = with pkgs; [
-              nodejs
+              nodejs_22
               git
             ];
 
